@@ -1404,7 +1404,7 @@ var pekarstas = {
                 }, self.mouse_leave_timeout_duration);
             });
             this.$room_landing2_cover_rating_grade.on('click', function () {
-                if ($window.width() > 640) return;
+                if ($window.width() > 0) return;
                 self.openPopup();
             }).on('mouseenter', function () {
                 if ($window.width() < 641) return;
@@ -1419,8 +1419,7 @@ var pekarstas = {
         },
         openPopup: function () {
             var self = this;
-            if ($window.width() < 641) pekarstas.popup.openPopup('room_rate');
-            else this.$room_landing2_cover_rating.attr('data-active', '');
+            this.$room_landing2_cover_rating.attr('data-active', '');
             this.$circle_percent.each(function () {
                 self.setPercent($(this));
             });
