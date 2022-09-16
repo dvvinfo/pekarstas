@@ -18,6 +18,7 @@ roomLanding2CoverRating.addEventListener("click", () => {
 });
 
 
+
 copyBtn.addEventListener("click", getCopy);
 copyBtn.addEventListener("mouseout", getClass);
 
