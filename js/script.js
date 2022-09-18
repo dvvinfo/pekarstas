@@ -9,7 +9,7 @@ const roomLanding2CoverRatingGrade = document.querySelector(
   ".room-landing2-cover__rating-grade"
 );
 roomLanding2CoverRatingGrade.addEventListener('click', () => {
-  roomLanding2CoverRating.classList.toggle("active");
+  roomLanding2CoverRating.classList.add("active");
   roomLanding2CoverRating.style.height='480px'
 });
 roomLanding2CoverRating.addEventListener("click", () => {
