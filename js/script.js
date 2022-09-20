@@ -1,4 +1,3 @@
-
 const copyBtn = document.querySelector(".copy-btn");
 const copyInput = document.querySelector(".copy-input");
 const copyText = document.querySelector(".copy-text");
@@ -22,15 +21,26 @@ roomLanding2CoverRating.addEventListener("click", () => {
 
 // сопирование кода
 copyBtn.addEventListener("click", getCopy);
-copyBtn.addEventListener("mouseout", getClass);
 
 function getCopy() {
-  copyInput.select();
-  document.execCommand("copy");
-  copyInput.classList.add("copy-hidden");
-  copyText.classList.add("copy-visible");
-}
-function getClass() {
-  copyInput.classList.remove("copy-hidden");
-  copyText.classList.remove("copy-visible");
+
+  const text = copyInput.value;
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      setTimeout(() => {
+        copyInput.classList.add("copy-hidden");
+        copyText.classList.add("copy-visible");
+        copyBtn.classList.add("copy-hidden");
+      }, 1000);
+    })
+    .catch((err) => {
+      console.error("Error in copying text: ", err);
+    });
+
+  setTimeout(() => {
+    copyInput.classList.remove("copy-hidden");
+    copyText.classList.remove("copy-visible");
+    copyBtn.classList.remove("copy-hidden");
+  }, 2000);
 }
