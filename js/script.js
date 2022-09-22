@@ -4,7 +4,7 @@ const copyText = document.querySelector(".copy-text");
 const roomRageRate = document.querySelector("#room-page-rate");
 const roomContentTabMobile = document.querySelectorAll(".room-content-tab__mobile");
 const pageLayoutSliderDots= document.querySelector(".page-layout-slider__dots");
-// const btns = pageLayoutSliderDots.querySelectorAll(".room-content-tab__mobile");
+ const btns = pageLayoutSliderDots.querySelectorAll(".room-content-tab__mobile");
 const roomLanding2CoverRating = document.querySelector(
   ".room-landing2-cover-rating"
 );
@@ -80,10 +80,10 @@ function getCopy() {
 
 // myFunction();
 
-// roomContentTabMobile.forEach(button => {
-//   button.addEventListener('click', function() {
-//     roomContentTabMobile.forEach((btn) => btn.classList.remove("active-tab"));
-//     this.classList.add("active-tab");
+roomContentTabMobile.forEach(button => {
+  button.addEventListener('click', function() {
+    roomContentTabMobile.forEach((btn) => btn.classList.remove("active-tab"));
+    this.classList.add("active-tab");
 
-//   })
-// })
+  })
+})
