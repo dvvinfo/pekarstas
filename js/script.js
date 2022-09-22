@@ -45,7 +45,7 @@ function getCopy() {
     copyInput.classList.remove("copy-hidden");
     copyText.classList.remove("copy-visible");
     copyBtn.classList.remove("copy-hidden");
-  }, 2000);
+  }, 1000);
 }
 
 // roomContentTabMobile.forEach(element => {
