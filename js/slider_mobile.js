@@ -6,7 +6,6 @@ $(document).ready(function () {
     margin: 10,
     autoHeight: true,
     pagination: true,
-     dotData: true,
     dotsData: true,
     dotsContainer: ".page-layout-slider__dots",
   });
