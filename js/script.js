@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     copyBtn.addEventListener("click", getCopy);
 
     function getCopy() {
-      const text = copyInput.value;
+      const text = copyInput.textContent;
       navigator.clipboard
         .writeText(text)
         .then(() => {
