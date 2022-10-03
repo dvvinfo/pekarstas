@@ -19,9 +19,9 @@ $(document).ready(function () {
   );
 
 
-  var owl = $(".academy-tabs__nav-tabs"),
+  var owl = $(".academy-slider"),
     // rangeArr = [],
-    inputType = $(".slider-range__input");
+    inputType = $(".slider-range__input")
 owl.owlCarousel({
   items: 1,
   loop: true,
@@ -43,11 +43,7 @@ $("input").on("change", function (e) {
   // console.log(e.item.index);
   // FIGURE OUT HOW TO GET CAROUSEL INDEX
 
-  $(".academy-tabs__nav-tabs").trigger("to.owl.carousel", [
-    inputType.val(),
-    1,
-    true,
-  ]);
+  $(".academy-slider").trigger("to.owl.carousel", [inputType.val(), 1, true]);
 });
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
