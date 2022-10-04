@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageLayoutSliderDots = document.querySelector(
       ".page-layout-slider__dots"
     );
-    const btns = pageLayoutSliderDots.querySelectorAll(
-      ".room-content-tab__mobile"
-    );
+    
     const roomLanding2CoverRating = document.querySelector(
       ".room-landing2-cover-rating"
     );
