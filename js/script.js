@@ -18,37 +18,46 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     // всплывашка Рейтинг покер-рума
-    roomLanding2CoverRatingGrade.addEventListener("click", () => {
-      roomLanding2CoverRating.classList.add("active");
-      roomLanding2CoverRating.style.height = "480px";
-    });
-    roomLanding2CoverRating.addEventListener("click", () => {
-      roomLanding2CoverRating.classList.remove("active");
-      roomLanding2CoverRating.style.height = "0";
-    });
+    if (roomLanding2CoverRatingGrade) {
+      roomLanding2CoverRatingGrade.addEventListener("click", () => {
+        roomLanding2CoverRating.classList.add("active");
+        roomLanding2CoverRating.style.height = "480px";
+      });
+    }
+    
+    if (roomLanding2CoverRating) {
+      roomLanding2CoverRating.addEventListener("click", () => {
+        roomLanding2CoverRating.classList.remove("active");
+        roomLanding2CoverRating.style.height = "0";
+      });
+    }
+    
 
     // сопирование кода
-    copyBtn.addEventListener("click", getCopy);
+    if (copyBtn) {
+      copyBtn.addEventListener("click", getCopy);
 
-    function getCopy() {
-      const text = copyInput.textContent;
-      navigator.clipboard
-        .writeText(text)
-        .then(() => {
-          copyInput.classList.add("copy-hidden");
-          copyText.classList.add("copy-visible");
-          copyBtn.classList.add("copy-hidden");
-        })
-        .catch((err) => {
-          console.error("Error in copying text: ", err);
-        });
+      function getCopy() {
+        const text = copyInput.textContent;
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            copyInput.classList.add("copy-hidden");
+            copyText.classList.add("copy-visible");
+            copyBtn.classList.add("copy-hidden");
+          })
+          .catch((err) => {
+            console.error("Error in copying text: ", err);
+          });
 
-      setTimeout(() => {
-        copyInput.classList.remove("copy-hidden");
-        copyText.classList.remove("copy-visible");
-        copyBtn.classList.remove("copy-hidden");
-      }, 1000);
+        setTimeout(() => {
+          copyInput.classList.remove("copy-hidden");
+          copyText.classList.remove("copy-visible");
+          copyBtn.classList.remove("copy-hidden");
+        }, 1000);
+      }
     }
+    
 
     roomContentTabMobile.forEach((button) => {
       button.addEventListener("click", function () {
