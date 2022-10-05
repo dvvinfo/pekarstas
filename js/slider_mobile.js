@@ -28,9 +28,7 @@ $(document).ready(function () {
     autoHeight: true,
     stagePadding: 10,
   });
-  //   function getIndex(event) {
-
-  //   }
+  
   owl.on("changed.owl.carousel", function (event) {
     console.log(event.item.index);
     inputType.val(event.item.index);

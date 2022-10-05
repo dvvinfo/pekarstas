@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const roomLanding2CoverRatingGrade = document.querySelector(
       ".room-landing2-cover__rating-grade"
     );
+    const academyTabsLink = document.querySelectorAll(".academy-tabs__link");
 
     // всплывашка Рейтинг покер-рума
     if (roomLanding2CoverRatingGrade) {
@@ -65,6 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
           btn.classList.remove("active-tab")
         );
         this.classList.add("active-tab");
+      });
+    });
+
+    // добавление активного класса табам академии
+    
+    academyTabsLink.forEach((button) => {
+      button.addEventListener("click", function () {
+        academyTabsLink.forEach((btn) => btn.classList.remove("active-btn"));
+        this.classList.add("active-btn");
       });
     });
   });
