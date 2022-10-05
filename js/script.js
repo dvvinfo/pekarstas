@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // добавление активного класса табам академии
-    
-    academyTabsLink.forEach((button) => {
-      button.addEventListener("click", function () {
-        academyTabsLink.forEach((btn) => btn.classList.remove("active-btn"));
-        this.classList.add("active-btn");
-      });
-    });
+
+    // academyTabsLink.forEach((button) => {
+    //   button.addEventListener("click", function () {
+    //     academyTabsLink.forEach((btn) => btn.classList.remove("active-btn"));
+    //     this.classList.add("active-btn");
+    //   });
+    // });
   });
