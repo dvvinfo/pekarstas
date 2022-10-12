@@ -43,6 +43,7 @@ $(document).ready(function () {
     margin: 8,
     autoHeight: true,
     stagePadding: 10,
+    slideBy: 1,
   });
 
   owl.on("changed.owl.carousel", function (event) {
@@ -70,6 +71,7 @@ $(document).ready(function () {
     //loop: true,
     margin: 8,
     autoHeight: true,
+    slideBy: 1,
   });
 
   owl.on("changed.owl.carousel", function (event) {
@@ -91,4 +93,19 @@ $(document).ready(function () {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
+
+  var o1 = $(".academy-slider");
+   var o2 = $(".academy-slider__tab");
+   var o2settings = {
+     items: 1,
+     //loop: true,
+     margin: 8,
+     autoHeight: true,
+     slideBy: 1,
+   };
+   o2.owlCarousel(o2settings);
+
+   o1.on("translate.owl.carousel", function (e) {
+     o2.trigger("to.owl.carousel", e.page.index * o2settings.slideBy);
+   });
 });
