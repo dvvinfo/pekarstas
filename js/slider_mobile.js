@@ -95,17 +95,17 @@ $(document).ready(function () {
   });
 
   var o1 = $(".academy-slider");
-   var o2 = $(".academy-slider__tab");
-   var o2settings = {
-     items: 1,
-     //loop: true,
-     margin: 8,
-     autoHeight: true,
-     slideBy: 1,
-   };
-   o2.owlCarousel(o2settings);
+  var o2 = $(".academy-slider__tab");
+  var o2settings = {
+    items: 1,
+    //loop: true,
+    margin: 8,
+    autoHeight: true,
+    slideBy: 1,
+  };
+  o2.owlCarousel(o2settings);
 
-   o1.on("translate.owl.carousel", function (e) {
-     o2.trigger("to.owl.carousel", e.page.index * o2settings.slideBy);
-   });
+  o1.on("translate.owl.carousel", function (e) {
+    o2.trigger("to.owl.carousel", e.page.index * o2settings.slideBy);
+  });
 });
