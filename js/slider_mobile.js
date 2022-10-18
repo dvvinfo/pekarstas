@@ -72,6 +72,7 @@ $(document).ready(function () {
     margin: 8,
     autoHeight: true,
     slideBy: 1,
+    touchDrag: false
   });
 
   owl.on("changed.owl.carousel", function (event) {
